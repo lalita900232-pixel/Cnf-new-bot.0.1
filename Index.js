@@ -26,13 +26,13 @@ client.on(Events.InteractionCreate, async (interaction) => {
     if (interaction.commandName === 'help') {
         const helpEmbed = new EmbedBuilder()
             .setColor('#3498db')
-            .setTitle('📖 Aries Attendance Guide')
-            .setDescription('Welcome to the official attendance system.')
+            .setTitle('📖 GANAKA Guide')
+            .setDescription('Welcome to the official Ganaka system.')
             .addFields(
                 { name: '👤 Public Commands', value: 'Type `online` to start session.\nType `offline` to end session.' },
                 { name: '🛡️ Admin Commands', value: '`/setslot`: Set custom role messages.\n`/testreminder`: Send a manual savage poke.\n`/announce`: Send a global announcement.\n`/restart`: Safe system reboot.' }
             )
-            .setFooter({ text: 'AAB System v2.0' });
+            .setFooter({ text: 'Ganaka System v0.1' });
         return interaction.reply({ embeds: [helpEmbed], ephemeral: true });
     }
 
