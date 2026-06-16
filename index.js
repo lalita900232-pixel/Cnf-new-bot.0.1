@@ -30,7 +30,7 @@ async function sendUpdate(title, message, isError = false) {
 
 client.once('ready', async () => {
     console.log("🚀 Bot is Ready!");
-    await sendUpdate("🚀 System Online", "Ganaka Attendance System v0.1 is now active.");
+    await sendUpdate("🚀 System Online", "**Ganaka Attendance System v0.2 is now active.**");
     
     const cmds = [
         new SlashCommandBuilder().setName('help').setDescription('View bot manual'),
