@@ -6,7 +6,7 @@ const { data, saveData } = require('./data');
 const express = require('express');
 
 const app = express();
-app.get('/', (req, res) => res.send('ＧＡＮＡＫＡ Online ✅'));
+app.get('/', (req, res) => res.send('Sofia is here 💕'));
 app.listen(process.env.PORT || 8080);
 
 const client = new Client({
@@ -29,8 +29,8 @@ async function sendUpdate(title, message, isError = false) {
 }
 
 client.once('ready', async () => {
-    console.log("🚀 Bot is Ready!");
-    await sendUpdate("**⚠️ Maintenance Alert**", "**Bot is ready for commands!**");
+    console.log("💕 Sofia is Ready!");
+    await sendUpdate("**⚠️ Maintenance Alert**", "**Sofia is ready for commands!**");
     
     const cmds = [
         new SlashCommandBuilder().setName('help').setDescription('View bot manual'),
@@ -67,8 +67,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
         if (interaction.commandName === 'help') {
             const helpEmbed = new EmbedBuilder()
                 .setColor('#3498db')
-                .setTitle('📖 GANAKA Guide')
-                .setDescription('Welcome to the official Ganaka system.')
+                .setTitle('📖 Sofia Guide')
+                .setDescription('Welcome to the official CNF system.')
                 .addFields(
                     { name: '👤 Public Commands', value: 'Type `online` to start session.\nType `offline` to end session.' },
                     { name: '🛡️ Admin Commands', value: '`/setslot`: Set custom role messages.\n`/testreminder`: Send a manual savage poke.\n`/announce`: Send a global announcement.\n`/restart`: Safe system reboot.' }
